@@ -9,16 +9,18 @@ import GenerareDocumente from "./components/GenerareDocumente";
 export default function App() {
   return (
     <Routes>
+      {/* 1. Ruta de Login (fără Sidebar) */}
       <Route path="/login" element={<LoginPage />} />
 
-      <Route element={<PrivateRoute />}>
-        <Route element={<AutoLogout logoutMinutes={30}><Layout /></AutoLogout>}>
-          <Route path="/generareDocument" element={<GenerareDocumente />} />
-          {/* <Route path="/uploadDocumente" element={<UploadDocumente />} /> */}
-        </Route>
+      {/* 2. Zona cu Sidebar (Layout) */}
+      {/* Am scos comentariul de pe Layout pentru a permite afișarea Sidebar-ului */}
+      <Route element={<Layout />}> 
+          <Route path="/generareDocumente" element={<GenerareDocumente />} />
+          <Route path="/uploadDocumente" element={<div style={{color: 'white'}}>Pagina Upload</div>} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      {/* 3. Redirecționare Safe */}
+      <Route path="*" element={<Navigate to="/generareDocumente" replace />} /> 
     </Routes>
   );
 }
