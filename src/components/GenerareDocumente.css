@@ -1,0 +1,90 @@
+/* ===== GENERARE DOCUMENTE - ALINIAT CU STILUL LOGIN ===== */
+
+.page-container {
+    display: flex;
+    align-items: center; /* Centrare verticală */
+    justify-content: center; /* Centrare orizontală */
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #0a0118 0%, #160828 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cardul central - Identic cu .login-card */
+.document-card {
+    background: rgba(22, 8, 40, 0.85);
+    backdrop-filter: blur(20px);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(167, 139, 250, 0.2),
+                0 0 0 1px rgba(167, 139, 250, 0.1);
+    width: 450px; /* Puțin mai lat decât login pentru a lăsa loc textului */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #a78bfa 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Grupul de input - Reutilizăm logica de la .input-group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Label-ul să fie la stânga */
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    color: #14b8a6;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+.input-field {
+    width: 100%;
+    border: 1.5px solid rgba(167, 139, 250, 0.2);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: #0a0118;
+    color: #f0e7ff;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+/* Butonul principal - Stilul .login-btn */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(167, 139, 250, 0.3);
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(167, 139, 250, 0.4);
+}

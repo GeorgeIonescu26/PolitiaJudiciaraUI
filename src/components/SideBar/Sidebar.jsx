@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <h2>Discipline Admin</h2>
+        <h2>Politia Judiciara</h2>
         <span className="version">v1.0</span>
       </div>
 
@@ -36,16 +36,6 @@ const Sidebar = () => {
           </button>
         ))}
       </nav>
-
-      <div className="sidebar-footer">
-        <div className="user-info">
-          <div className="user-avatar">AD</div>
-          <div className="user-details">
-            <div className="user-name">Administrator</div>
-            <div className="user-role">Admin</div>
-          </div>
-        </div>
-      </div>
     </aside>
   );
 };
